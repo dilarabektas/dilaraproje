@@ -1,0 +1,70 @@
+{% extends "sablon.html" %} {% block icerik %}
+<!-- Container (Portfolio Section) -->
+<div class="container-fluid text-center bg-grey" style="color: white;">
+  <h2>Portfolio</h2><br>
+  <h4>What we have created</h4>
+  <div class="row text-center">
+    <div id="contact" class="container">
+        <div class="conteiner">
+            <div style="background-color:rgba(110, 95, 100, 0.589)">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <img src="/static/img/endgame - Kopya.jpg" width="400" height="580">
+                  </div>
+                  <div class="col-sm-8">
+                    <p class="black-text">
+                        <h4>Tür: Aksiyon, Fantastik, Macera </h4>
+                        <h4>Yayın Yılı: 2019 </h4>
+                        <h5>Yenilmezler serisinin 3. filmi olan Avengers Infinity War filminin ardından bir çok süper kahraman yok olmuştur. Black Panther, Gamora, Doktor Strange, Drax, Mantis, genç Örümcek Adam, Bucky Barnes, Groot, Scarlet Witch, Vision, Star Lord, Maria Hill, The Wasp ve Nick Fury gibi kahramanlarımızın yok olma sebebi Thanos'un Sonsuzluk Eldiveni'ni elde etmesi ve kendi sistemini kurması yüzündendir. Artık dünyada neredeyse hiç bir şey için umut kalmamıştır.
+        <br><br>
+        
+        Dünyada kalan Kaptan Amerika, Thor, Black Widow ve Hulk bir taraftan kaybettikleri arkadaşları için yaslarını tutmaktayken, Iron ve Nebula ise kontrolünü kaybettikleri bir uzay gemisinin içinde, sonsuz boşlukta sürüklenmektedir. Ekibimiz için işler hiç iyi görünmese de, Kuantum Bölgesi'nden kurtulmanın bir yöntemini keşfederek Yenilmezler ekibinin geride kalan kahramanlarına gidecek olan Ant-Man her şey için yepyeni bir umut olacaktır.
+        <br><br>
+        Avengers serisinin devam filmi Avengers 4 Annihilation'da Thanos parmağını şıklatacak, dünya nüfusu yarı yarıya azalacak, insanların çoğu yok olacaktır. Merakla beklenen Yenilmezler 4 Endgame filminde Tony Stark için zaman taşını veren Doktor Strange'ın gördüğü milyonlarca ihtimallerden bir tanesi gerçekleşip Thanos'u yenebilecekler midir?
+        </h5>
+                      </p>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+          <div class="col-md-2">
+            
+          </div>
+          <form action="/yorumyap" method="POST">
+          <div class="col-md-10">
+            <textarea class="form-control" id="comments" name="comments" placeholder="Yorumunuz yazınız" style="width: 500%;"rows="5"></textarea>
+            <br>
+            <div class="row">
+              <div class="col-md-12 form-group">
+                <input  class="btn pull-right bg-success" Value="gönder" type="submit">
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </form>
+        <h1>YORUMLAR</h1>
+        <br>
+        <div class="list-group">
+            {% for yap in veri %}
+            <div>
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active" style="background-color: rgb(187, 136, 59);">
+                    <div class="d-flex w-100 justify-content-between" >
+                      <h5 class="mb-1">{{ yap.get("ad") }}</h5>
+                      <small>{{ yap.get("tarih") }}</small>
+                    </div>
+                    
+                    <p class="mb-1">{{ yap.get("yorum") }}</p>
+                  </a>
+            </div>
+            {% endfor %}
+          </div>
+
+  </div>
+</div>
+
+</div>
+{% endblock %}

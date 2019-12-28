@@ -1,0 +1,19 @@
+
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+
+.yazifontunavbar
+{
+    font-family: 'Indie Flower', cursive;
+    font-size: 28px;
+    color: white;
+}
+.yazifont
+{
+    font-family: 'Indie Flower', cursive;
+    color: white;
+    font-size: 18px;
+}
+.thumbnail:hover {
+    background-color: darkkhaki;
+    opacity: 0.6;
+}

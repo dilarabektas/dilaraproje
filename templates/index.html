@@ -1,0 +1,57 @@
+{% extends "sablon2.html" %} {% block icerik %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+          
+        </div>
+        <div class="col-md-4 " style="background-color: rgb(100, 0, 0);">
+            <p style="text-align: center;">{{hata}}</p>
+</div>
+        
+</div>
+</div>
+<div class="container" style="color: white;">
+    <br>
+    <br><br>
+    <br>
+    <div class="row">
+        <div class="col-md-6 " style="background-image:url('/static/img/arkaplan.jpg');">
+            <h3>Giriş Yap</h3>
+            <form action="/girisyap" method="POST">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="email" placeholder="Email adresiniz" value="" />
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="parola"placeholder="Parolanız " value="" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btnSubmit" value="Giriş Yap" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <br><br>
+    <br><br>
+    <div class="row">
+        <div class="col-md-6 offset-md-6" style="background-image:url('/static/img/arkaplan.jpg');">
+            
+            <h3>Kaydol</h3>
+            <form action="/kaydol" method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="email" placeholder="Email adresiniz" value="" />
+                </div>
+                <div class="form-group">
+                        <input type="text" class="form-control" name="ad"placeholder="Adınız " value="" />
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="parola"placeholder="Parolanız " value="" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btnSubmit" value="Kaydol" />
+                </div>
+            </form>
+        </div>
+        </div>
+        <br><br>
+</div>
+{% endblock %}
